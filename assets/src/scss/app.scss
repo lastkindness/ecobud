@@ -1,0 +1,22 @@
+@import '~swiper/swiper';
+@import '~swiper/modules/pagination/pagination';
+@import '~swiper/modules/navigation/navigation';
+@import '~swiper/modules/grid/grid';
+@import '~swiper/modules/effect-fade/effect-fade';
+
+@import "fonts";
+@import "mixins";
+@import "vars";
+@import "typo";
+@import "grids";
+@import "modals";
+@import "general";
+
+@import "components/burger";
+@import "components/header";
+@import "components/footer";
+@import "components/button";
+
+
+@import "pages/404";
+

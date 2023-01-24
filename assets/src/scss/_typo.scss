@@ -1,0 +1,261 @@
+p,
+input,
+textarea,
+address,
+blockquote,
+blockquote p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    max-width: 100%;
+    margin: 0 0 16px;
+    font-family: $font;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6em;
+    color: $fontColor;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+input,
+textarea,
+a,
+button {
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+input {
+    width: 100%;
+    line-height: 1em;
+}
+
+address {
+    font-style: normal;
+}
+
+b,
+i,
+strong,
+em,
+a,
+span,
+input,
+i,
+mark {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    margin: 0;
+    outline: none;
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.44em;
+    margin: 0 0 0.65em;
+    font-family: $font;
+    font-weight: 400;
+    color: $headingColor;
+    text-align: center;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    @include animate(all);
+}
+.h1,
+h1 {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.35em;
+    color: $headingColor;
+    margin: 0;
+    text-transform: uppercase;
+    @include respond-to('desktop') {
+        font-size: 42px;
+    }
+    @include respond-to('mobile-sm') {
+        font-size: 36px;
+    }
+}
+.h2,
+h2 {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.35em;
+    text-transform: uppercase;
+    @include respond-to('desktop') {
+        font-size: 32px;
+    }
+    @include respond-to('mobile-sm') {
+        font-size: 24px;
+    }
+}
+
+.h3,
+h3 {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.36em;
+    @include respond-to('desktop') {
+        font-size: 28px;
+    }
+    @include respond-to('mobile') {
+        font-size: 22px;
+    }
+}
+
+.h4,
+h4 {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.34em;
+    text-transform: uppercase;
+    @include respond-to('desktop') {
+        font-size: 24px;
+    }
+    @include respond-to('mobile') {
+        font-size: 18px;
+    }
+}
+
+.h5,
+h5 {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.35em;
+    text-transform: uppercase;
+    @include respond-to('desktop') {
+        font-size: 20px;
+    }
+    @include respond-to('mobile') {
+        font-size: 16px;
+    }
+}
+.h6,
+h6 {
+    font-family: $font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.33em;
+    @include respond-to('desktop') {
+        font-size: 18px;
+    }
+    @include respond-to('mobile') {
+        font-size: 16px;
+    }
+}
+
+%a {
+    font-size: inherit;
+    @include animate(all);
+    text-decoration: none;
+    color: $linkColor;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        color: $hoverlink;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        @include animate(all);
+        &:before {
+            opacity: 1;
+            @include animate(all);
+        }
+    }
+}
+
+a {
+    @extend %a;
+}
+
+#wpadminbar a {
+    &:before {
+        display: none;
+    }
+}
+
+b,
+strong {
+    font-family: $font;
+    font-weight: 700;
+}
+
+em,
+i {
+    font-family: $font;
+    font-style: italic;
+    font-weight: 300;
+}
+
+mark {
+    color: $fontColor;
+    background-color: $secondary;
+    padding: 5px;
+}
+
+blockquote,
+q {
+    font-weight: 200;
+    color: $fontColor;
+    font-style: normal;
+    font-family: $font;
+    display: block;
+    p {
+        &:before,
+        &:after {
+            content: '"';
+        }
+    }
+}
+
+cite,
+figcaption {
+    font-style: normal;
+    font-size: 14px;
+    &:before {
+        content: '- ';
+    }
+}
+
+ol, ul {
+    color: $headingColor;
+    font-weight: 400;
+    list-style-type: none;
+    padding: 0 0 0 20px;
+    margin: 16px 0;
+    li {
+        margin: 0 0 16px;
+    }
+}

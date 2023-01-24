@@ -1,0 +1,208 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    outline: none;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    background-color: transparent;
+}
+
+html, body {
+    overflow-x: hidden;
+    background: $bg;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    &.nav-active {
+        overflow: hidden;
+    }
+}
+
+body {
+    padding: 220px 0 0;
+    height: 100%;
+    margin: 0;
+    font-family: $font;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6em;
+    color: $fontColor;
+    @include respond-to('tablet') {
+        padding: 120px 0 0;
+    }
+    @include respond-to('tablet-sm') {
+        padding: 135px 0 0;
+    }
+    @include respond-to('mobile') {
+        font: 400 14px/20px $font;
+        padding: 108px 0 0;
+    }
+    &.home {
+        padding: 0;
+    }
+}
+
+input, textarea {
+    color: $fontColor;
+    font: 400 16px/19px $font;
+    border: none;
+    margin-top: 16px;
+    @include respond-to('mobile') {
+        font: 400 14px/17px $font;
+    }
+}
+
+a img {
+    border: none;
+}
+
+img,
+picture {
+    object-fit: contain;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+}
+
+main,
+.main {
+    padding: 0 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-direction: column;
+    min-height: 100vh;
+    height: 100%;
+}
+
+section {
+    position: relative;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    @include respond-to('mobile-sm') {
+        min-width: 100%;
+    }
+    input {
+        line-height: 1em;
+        background: $white;
+        padding: 13px 22px;
+        opacity: 0.8;
+        border-radius: 4px;
+        margin-top: 16px;
+        color: $headingColor;
+        box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.8);
+    }
+    textarea {
+        margin-top: 16px;
+        color: $headingColor;
+        padding: 13px 22px;
+        opacity: 0.8;
+        border-radius: 4px;
+        box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.8);
+        min-height: 189px;
+    }
+}
+
+label {
+    white-space: nowrap;
+    font-size: 16px;
+    color: $headingColor;
+    padding: 0 10px 0 0;
+    display: flex;
+    align-items: center;
+}
+
+select {
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    flex: 1;
+    padding: 0 20px 0 10px;
+    color: $headingColor;
+    background-color: transparent;
+    background-image: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    min-width: 150px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid $headingColor;
+    overflow: hidden;
+    flex-grow: 1;
+}
+
+.select::after {
+    font-size: 10px;
+    position: absolute;
+    content: "\e901";
+    font-family: 'icomoon';
+    top: 0;
+    right: 7px;
+    padding: 0px;
+    background-color: transparent;
+    @include animate(all);
+    pointer-events: none;
+    transform: rotate(90deg);
+    @include respond-to('mobile') {
+        top: 7px;
+    }
+}
+.select:hover::after {
+    color: $linkColor;
+}
+.select.focus::after,
+.select.active::after {
+    @include animate(all);
+    transform: rotate(-90deg);
+}
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden
+}
+
+.ellip {
+    display: block;
+    height: 100%
+}
+
+.ellip-line {
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    vertical-align: bottom
+}
+
+.ellip,.ellip-line {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%
+}
+
