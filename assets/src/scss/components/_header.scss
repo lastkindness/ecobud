@@ -1,5 +1,203 @@
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    &__wrapper {
 
+    }
+    &__burger {
+        display: none;
+        @include respond-to('mobile') {
+            display: inline-block;
+            /*order: 2;*/
+        }
+        &.header__burger_mobile {
+            display: none;
+        }
+    }
+        &__head {
+            background: rgba(3, 17, 26, 1);
+            opacity: 0.9;
+            &-wrapper {
+                display: flex;
+                padding: 20px 0;
+                display: flex;
+                justify-content: space-between;
+                background: transparent;
+            }
+        }
+            &__logo {
+                width: 253px;
+                height: 31px;
+                @include respond-to("tablet") {
+                    height: 27px;
+                    width: 153px;
+                }
+            }
+            &__contacts {
+                display: flex;
+                align-items: center;
+                &_mobile {
+                    display: none;
+                }
+            }
+                &__telephone {
+                    margin-right: 32px;
+                    @include respond-to('mobile') {
+                        display: none;
+                    }
+                    a.header__telephone-number {
+                        color: $lightblueColor;
+                        font-weight: 400;
+                    }
+                }
+                &__icons {
+                    display: flex;
+                    margin-right: 16px;
+                    @include respond-to('mobile') {
+                        display: none;
+                    }
+                }
+                &__round {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 16px;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 100%;
+                    border: 2px solid $white;
+                }
+                &__facebook {
+                    &.icon-facebook {
+                        font-size: 12px;
+                    }
+                }
+                &__instagram {
+                    &.icon-instagram {
+                        font-size: 12px;
+                    }
+                }
+                &__youtube {
+                    &.icon-youtube {
+                        font-size: 12px;
+                    }
+                }
+                &__lang {
+                    @include respond-to('mobile') {
+                        margin-right: 16px;
+                    }
+                    &-slash {
+                        color: $lightblueColor;
+                    }
+                    .active {
+                        color: $lightblueColor;
+                    }
+                }
+    &__nav {
+        ul.header__menu {
+            margin: 5px 0 0;
+            background: transparent;
+            padding: 0;
+        }
+    }
+    .header__menu, .menu-header-privacy-menu-container {
+        @include animate(all);
+        @include respond-to('mobile') {
+            display: none;
+        }
+    }
+        &__menu {
+            display: grid;
+            margin: 0;
+            grid-gap: 5px;
+            grid-auto-columns: 1fr;
+            grid-auto-flow: column;
+            &-item {
+                margin: 0;
+                display: flex;
+                height: 44px;
+                justify-content: center;
+                align-items: center;
+                background: rgba(3, 17, 26, 1);
+                opacity: 0.9;
+                @include respond-to("tablet") {
+                    font-size: 14px;
+                }
+            }
+            &-link {
+                color: $white;
+            }
+        }
 }
 
 
+html.nav-active {
+    .header {
+        &__burger {
+            position: absolute;
+            z-index: 110;
+            right: 35px;
+            top: 35px;
+            span {
+                background-color: $white;
+            }
+            &.header__burger_mobile {
+                display: block;
+            }
+        }
+        &__nav {
+            padding: 84px 20px;
+            display: flex;
+            position: fixed;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            z-index: 100;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(3, 17, 26, 1);
+            opacity: 0.9;
+            @include animate(all);
+            @include respond-to('mobile') {
+                /*justify-content: center;*/
+            }
+            /*&:before {
+                content: "";
+                display: block;
+            }*/
+        }
+        &__menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__contacts_mobile {
+            display: flex;
+            flex-direction: column;
+            margin-top: 128px;
+        }
+        &__telephone_mobile {
+            @include respond-to('mobile') {
+                display: flex;
+                margin: 0;
+            }
+        }
+        &__icons_mobile {
+            @include respond-to('mobile') {
+                display: flex;
+                margin: 16px 0 0 0;
+            }
+            .header__round {
+                margin: 0 8px 0;
+            }
+        }
+    }
+}

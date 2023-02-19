@@ -1,3 +1,36 @@
 .burger {
-
+    display: block;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background-color: $white;
+        margin-bottom: 6px;
+        transition: 0.8s all;
+    }
+    &.clicked {
+        span {
+            margin-bottom: -2px;
+            &:nth-child(1) {
+                transform: translateY(3px) rotate(-45deg);
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                transform: translateY(3px) rotate(45deg);
+            }
+        }
+    }
 }
+
+.nav-active {
+    .burger {
+        position: absolute;
+        right: 10px;
+    }
+}
+

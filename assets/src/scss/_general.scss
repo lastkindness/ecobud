@@ -27,38 +27,27 @@ html {
 }
 
 body {
-    padding: 220px 0 0;
     height: 100%;
     margin: 0;
-    font-family: $font;
+    font-family: $fontMontserrat;
     font-weight: 300;
     font-size: 20px;
     line-height: 1.6em;
     color: $fontColor;
-    @include respond-to('tablet') {
-        padding: 120px 0 0;
-    }
-    @include respond-to('tablet-sm') {
-        padding: 135px 0 0;
-    }
-    @include respond-to('mobile') {
-        font: 400 14px/20px $font;
-        padding: 108px 0 0;
-    }
     &.home {
         padding: 0;
     }
 }
 
-input, textarea {
+/*input, textarea {
     color: $fontColor;
-    font: 400 16px/19px $font;
+    font: 700 14px/18px $fontColor;
     border: none;
     margin-top: 16px;
     @include respond-to('mobile') {
-        font: 400 14px/17px $font;
+        font: 400 12px/16px $font;
     }
-}
+}*/
 
 a img {
     border: none;
@@ -99,28 +88,32 @@ form {
     input {
         line-height: 1em;
         background: $white;
-        padding: 13px 22px;
-        opacity: 0.8;
-        border-radius: 4px;
+        padding: 16px;
+        font: $fontColor;
+        font-weight: 700;
+        font-size: 14px;
+        border-radius: 8px;
+        border: 2px solid $borderColor;
         margin-top: 16px;
-        color: $headingColor;
-        box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.8);
+        color: $fontColor
     }
     textarea {
         margin-top: 16px;
-        color: $headingColor;
-        padding: 13px 22px;
-        opacity: 0.8;
-        border-radius: 4px;
-        box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.8);
-        min-height: 189px;
+        color: $fontColor;
+        padding: 16px;
+        font-color: $fontColor;
+        font-weight: 700;
+        font-size: 14px;
+        border-radius: 8px;
+        border: 2px solid $borderColor;
+        min-height: 198px;
     }
 }
 
 label {
     white-space: nowrap;
     font-size: 16px;
-    color: $headingColor;
+    color: $fontColor;
     padding: 0 10px 0 0;
     display: flex;
     align-items: center;
@@ -133,7 +126,7 @@ select {
     box-shadow: none;
     flex: 1;
     padding: 0 20px 0 10px;
-    color: $headingColor;
+    color: $fontColor;
     background-color: transparent;
     background-image: none;
     cursor: pointer;
@@ -151,7 +144,7 @@ select::-ms-expand {
     min-width: 150px;
     height: 32px;
     border-radius: 4px;
-    border: 1px solid $headingColor;
+    border: 1px solid $fontColor;
     overflow: hidden;
     flex-grow: 1;
 }
@@ -206,3 +199,45 @@ select::-ms-expand {
     max-width: 100%
 }
 
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 12px);
+}
+.swiper-button-prev, .swiper-button-next {
+    border-radius: 100%;
+    border: 1px solid $white;
+    position: absolute;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    &:after {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: $white;
+        width: 48px;
+        height: 48px;
+    }
+    &.swiper-button-disabled {
+        background: rgba(255, 255, 255, 0.3);
+        opacity: 1;
+        cursor: auto;
+        pointer-events: none;
+    }
+}
+/*.swiper-slide-thumb-active {
+    &:after {
+        display: block;
+        content: "";
+        height: 325px;
+        width: 5px;
+        background-color: $greenColor;
+    }
+}*/

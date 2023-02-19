@@ -9,23 +9,24 @@ button {
     text-align: center;
     align-self: center;
     min-width: 272px;
-    padding: 16px 64px;
+    padding: 16px 32px;
     margin: 0 auto;
     font-weight: 400;
     font-size: 24px;
     line-height: 1.33em;
-    font-family: $font;
+    font-family: $fontMontserrat;
     cursor: pointer;
     text-decoration: none;
     outline: none;
     color: $fontColor;
-    border: 2px solid;
-    border-radius: 4px;
+    background-color: transparent;
+    border: 2px solid $brandColor;
+    border-radius: 8px;
     width: auto;
     @include animate(all);
     &:hover {
         @include animate(all);
-        background-color: $headingColor;
+        background-color: $brandColor;
         color: $white;
     }
     &:active {
@@ -38,4 +39,13 @@ button {
         pointer-events: none;
         cursor: default;
    }
+    &_blue {
+        background-color: $brandColor;
+        color: white;
+        &:hover {
+            @include animate(all);
+            background-color: transparent;
+            /*color: $brandColor;*/
+        }
+    }
 }

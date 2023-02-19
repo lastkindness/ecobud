@@ -1,5 +1,16 @@
 .footer {
-
+    background: #F6F7FA;
+    &__wrapper {
+        padding: 28px 0;
+        text-align: center;
+    }
+    &__text {
+        color: $brandColor;
+        font-size: 14px;
+        @include respond-to("tablet") {
+            font-size: 12px;
+        }
+    }
 }
 
 
