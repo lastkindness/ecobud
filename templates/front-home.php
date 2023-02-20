@@ -76,4 +76,13 @@ get_header('front'); ?>
         </div>
 </section>
 
+<section class="about">
+    <img class="about__img">
+    <div class="container">
+        <div class="about__wrapper">
+
+        </div>
+    </div>
+</section>
+
 <?php get_footer('front'); ?>
