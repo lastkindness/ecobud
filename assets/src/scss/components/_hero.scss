@@ -28,6 +28,7 @@
         @include respond-to('mobile') {
             left: 24px;
             width: calc(100% - 48px);
+            bottom: 122px;
         }
     }
     &__slider {
@@ -50,18 +51,7 @@
             }
             @include respond-to('mobile') {
                 left: 24px;
-            }
-            &-bullet {
-                margin: 0 12px;
-                border: none;
-                width: 12px;
-                height: 12px;
-                background: $dotColor;
-            }
-            &-bullet-active {
-                margin: 0 12px;
-                border: 3px solid $blueColor;
-                background: transparent;
+                margin: 12px 0 16px;
             }
         }
     }
@@ -110,10 +100,12 @@
             @include respond-to('tablet') {
                 left: 32px;
                 width: calc(100% - 64px);
+                bottom: 427px;
             }
             @include respond-to('mobile') {
                 left: 24px;
                 width: calc(100% - 48px);
+                bottom: 287px;
             }
         }
         &-img {
@@ -133,6 +125,12 @@
             margin-top: 16px;
             font-size: 64px;
             color: $white;
+            @include respond-to('tablet') {
+                font-size: 48px;
+            }
+            @include respond-to('mobile') {
+                font-size: 32px;
+            }
         }
         &-text {
             margin-top: 24px;
@@ -179,24 +177,44 @@
         &-subtitle {
             font-size: 24px;
             font-weight: 700;
-            text-align: center;
             color: $white;
             display: flex;
+            justify-content: center;
             position: absolute;
             transform: translate(-50%, -50%);
             left: 50%;
             top: 50%;
             z-index: 11;
+            width: 100%;
+            @include respond-to('mobile') {
+                font-size: 16px;
+            }
         }
     }
     &__arrows {
         .swiper-button-prev {
-            left: 140px;
-            top: 203px;
+            left: 21%;
+            top: 75%;
+            @include respond-to('mobile') {
+                left: 19%;
+                width: 36px;
+                height: 36px;
+                &:after {
+                    font-size: 12px;
+                }
+            }
         }
         .swiper-button-next {
-            right: 140px;
-            top: 203px;
+            right: 21%;
+            top: 75%;
+            @include respond-to('mobile') {
+                right: 19%;
+                width: 36px;
+                height: 36px;
+                &:after {
+                    font-size: 12px;
+                }
+            }
         }
     }
 }
