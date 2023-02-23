@@ -99,20 +99,93 @@ get_header('front'); ?>
             <div class="about__principles">
                 <div class="about__principles-item">
                     <div class="about__principles-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="about__principles-logo"></div>
-                    <div class="about__principles-title h3">Lorem Ipsum</div>
-                    <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
+                    <div class="about__principles-descr">
+                        <div class="about__principles-title h3">Lorem Ipsum</div>
+                        <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
+                    </div>
                 </div>
                 <div class="about__principles-item">
                     <div class="about__principles-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="about__principles-logo"></div>
-                    <div class="about__principles-title h3">Lorem Ipsum</div>
-                    <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
+                    <div class="about__principles-descr">
+                        <div class="about__principles-title h3">Lorem Ipsum</div>
+                        <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
+                    </div>
                 </div>
                 <div class="about__principles-item">
                     <div class="about__principles-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="about__principles-logo"></div>
-                    <div class="about__principles-title h3">Lorem Ipsum</div>
-                    <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
+                    <div class="about__principles-descr">
+                        <div class="about__principles-title h3">Lorem Ipsum</div>
+                        <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section class="service">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/service-img-top.svg" class="service__img-top">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/service-img-middle.svg" class="service__img-middle">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/vector1.svg" class="service__img-bottom">
+    <div class="container">
+        <div class="service__wrapper">
+            <div class="service__title h1">Хто ми? </div>
+            <p class="service__descr">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
+            <div class="service__type">
+                <div class="service__type-item">
+                    <div class="service__type-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="service__type-logo"></div>
+                    <div class="service__type-title h3">Будівництво</div>
+                    <div class="service__type-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</div>
+                </div>
+                <div class="service__type-item">
+                    <div class="service__type-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="service__type-logo"></div>
+                    <div class="service__type-title h3">Проектування</div>
+                    <div class="service__type-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</div>
+                </div>
+                <div class="service__type-item">
+                    <div class="service__type-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="service__type-logo"></div>
+                    <div class="service__type-title h3">Development</div>
+                    <div class="service__type-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</div>
+                </div>
+            </div>
+            <div class="service__subtitle h3">Наші можливості</div>
+            <p class="service__text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
+            <div class="service__technique">
+                <div class="service__technique-title h3">Наш парк техніки<div class="arrow"></div></div>
+                <ul class="service__technique-list">
+                    <li class="service__technique-item">Ескаватор 99999</li>
+                    <li class="service__technique-item">Ескаватор 99999</li>
+                    <li class="service__technique-item">Ескаватор 99999</li>
+                    <li class="service__technique-item">Ескаватор 99999</li>
+                    <li class="service__technique-item">Ескаватор 99999</li>
+                    <li class="service__technique-item">Ескаватор 99999</li>
+                    <li class="service__technique-item">Ескаватор 99999</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="project">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project-img.svg" class="project__img">
+    <div class="container">
+        <div class="project__wrapper">
+            <div class="project__title h1">Проекти</div>
+            <div class="project__grid">
+                <a class="project__grid-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="project__grid-img">
+                </a>
+                <a class="project__grid-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="project__grid-img">
+                </a>
+                <a class="project__grid-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="project__grid-img">
+                </a>
+                <a class="project__grid-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="project__grid-img">
+                </a>
+            </div>
+            <a class="project__btn btn">Дивитися ще</a>
         </div>
     </div>
 </section>

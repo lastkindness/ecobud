@@ -1,0 +1,106 @@
+.service {
+    background: $lightblueColor;
+    &__img {
+        &-top {
+            position: absolute;
+            left: -28.5%;
+            top: -19.75%;
+            height: 1241px;
+            width: 1690px;
+        }
+        &-middle {
+            position: absolute;
+            height: 1241px;
+            width: 1690px;
+            right: -27%;
+            top: 22.33%
+        }
+        &-bottom {
+            position: absolute;
+            height: 1241px;
+            width: 1690px;
+            top: 65.4%;
+            left: -13%;
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+    }
+    &__wrapper {
+        padding: 80px 0 353px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__descr {
+        margin-top: 32px;
+        max-width: 1155px;
+    }
+    &__type {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1064px;
+        &-item {
+            padding: 0 16px;
+            margin-top: 32px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &-round {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 2.5px solid $brandColor;
+            width: 64px;
+            height: 64px;
+        }
+        &-logo {
+            display: flex;
+            width: 32px;
+            height: 28px;
+            top: 50px;
+            right: 50px;
+        }
+        &-title {
+            color: $brandColor;
+            margin-top: 8px;
+        }
+        &-text {
+            margin-top: 16px;
+            text-align: center;
+        }
+    }
+    &__subtitle {
+        margin-top: 64px;
+    }
+    &__text {
+        max-width: 854px;
+        margin-top: 8px;
+    }
+    &__technique {
+        margin-top: 34px;
+        &-title {
+            display: flex;
+            .arrow {
+                margin: 7px 0 0 16px;
+                width: 18px;
+                height: 18px;
+                border-radius: 4px;
+                border-top: 4px solid $fontColor;
+                border-right: 4px solid $fontColor;
+                transform: rotate(135deg);
+            }
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 24px 0;
+            padding: 0;
+        }
+    }
+}
