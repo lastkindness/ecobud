@@ -21,6 +21,7 @@
         @include respond-to('laptop') {
             right: unset;
             left: calc((100vw - 980px) / 2);
+            bottom: 122px;
         }
         @include respond-to('tablet') {
             left: 32px;
@@ -28,7 +29,6 @@
         @include respond-to('mobile') {
             left: 24px;
             width: calc(100% - 48px);
-            bottom: 122px;
         }
     }
     &__slider {
@@ -45,13 +45,13 @@
             }
             @include respond-to('laptop') {
                 left: calc((100vw - 980px) / 2);
+                margin: 12px 0 16px;
             }
             @include respond-to('tablet') {
                 left: 32px;
             }
             @include respond-to('mobile') {
                 left: 24px;
-                margin: 12px 0 16px;
             }
         }
     }
@@ -95,12 +95,11 @@
             @include respond-to('laptop') {
                 left: calc((100vw - 980px) / 2);
                 width: calc(100% - (100vw - 980px));
-                bottom: 387px;
+                bottom: 337px;
             }
             @include respond-to('tablet') {
                 left: 32px;
                 width: calc(100% - 64px);
-                bottom: 427px;
             }
             @include respond-to('mobile') {
                 left: 24px;
@@ -125,6 +124,7 @@
             margin-top: 16px;
             font-size: 64px;
             color: $white;
+            text-align: left;
             @include respond-to('tablet') {
                 font-size: 48px;
             }

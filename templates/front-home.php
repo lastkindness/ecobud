@@ -87,12 +87,12 @@ get_header('front'); ?>
                 <div class="about__photo-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pavlo.png" alt="" class="about__photo-img">
                     <div class="about__photo-title h4">Павло Сомов</div>
-                    <div class="about__photo-text">Зовниаснк групи компаній Ecobud</div>
+                    <div class="about__photo-text">Засновник групи компаній Ecobud</div>
                 </div>
                 <div class="about__photo-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/marya.png" alt="" class="about__photo-img">
-                    <div class="about__photo-title h4">Павло Сомов</div>
-                    <div class="about__photo-text">Зовниаснк групи компаній Ecobud</div>
+                    <div class="about__photo-title h4">Марина Круглова</div>
+                    <div class="about__photo-text">Засновник архітектурного бюро Ecobud Project</div>
                 </div>
             </div>
             <div class="about__subtitle h3">Наші принципи</div>
@@ -186,6 +186,65 @@ get_header('front'); ?>
                 </a>
             </div>
             <a class="project__btn btn">Дивитися ще</a>
+        </div>
+    </div>
+</section>
+
+<section class="news">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/news.svg" class="news__img">
+    <div class="container">
+        <div class="news__wrapper">
+            <div class="news__title h1">Новини</div>
+            <div class="news__grid">
+                <a class="news__grid-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="news__grid-img">
+                    <div class="news__grid-title h1">Lorem Ipsum</div>
+                    <div class="news__grid-subtitle">Lorem Ipsum</div>
+                </a>
+                <a class="news__grid-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="news__grid-img">
+                    <div class="news__grid-title h1">Lorem Ipsum</div>
+                    <div class="news__grid-subtitle">Lorem Ipsum</div>
+                </a>
+                <a class="news__grid-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="news__grid-img">
+                    <div class="news__grid-title h1">Lorem Ipsum</div>
+                    <div class="news__grid-subtitle">Lorem Ipsum</div>
+                </a>
+                <a class="news__grid-item">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="news__grid-img">
+                    <div class="news__grid-title h1">Lorem Ipsum</div>
+                    <div class="news__grid-subtitle p">Lorem Ipsum</div>
+                </a>
+            </div>
+            <a class="news__btn btn">Дивитися ще</a>
+        </div>
+    </div>
+</section>
+
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__wrapper">
+            <div class="contacts__title h1">Наші контакти</div>
+            <div class="contacts__icons">
+                <a href="#" class="contacts__round">
+                    <span class="icon icon-facebook contacts__facebook"></span>
+                </a>
+                <a href="#" class="contacts__round">
+                    <span class="icon icon-instagram contacts__instagram"></span>
+                </a>
+                <a href="#" class="contacts__round">
+                    <span class="icon icon-youtube contacts__youtube"></span>
+                </a>
+            </div>
+            <p class="contacts__adress">Киев ул. Товарная 1 <br> БЦ Тринити <br> Офис Ecobud building group</p>
+            <a href="#" class="contacts__map">Дивитися на мапі<span class="contacts__map-telephone icon-map"></span></a>
+            <div class="contacts__subtitle h3">Приеднуйся до нас</div>
+            <p class="contacts__text">Lorem ipsum dolor sit amet consectetur. Nunc adipiscing id sit augue. Tellus ut mi diam et vestibulum euismod.</p>
+            <div class="contacts__buttons">
+                <a href="" class="contacts__buttons-btn btn">Як Кліент</a>
+                <a href="" class="contacts__buttons-btn btn">Як Партнер</a>
+            </div>
         </div>
     </div>
 </section>
