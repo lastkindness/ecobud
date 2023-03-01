@@ -144,6 +144,7 @@
         height: 267px;
         text-align: center;
         position: relative;
+        z-index: 2;
         @include respond-to('mobile') {
             height: 160px;
         }

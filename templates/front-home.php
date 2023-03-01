@@ -87,12 +87,12 @@ get_header('front'); ?>
                 <div class="about__photo-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pavlo.png" alt="" class="about__photo-img">
                     <div class="about__photo-title h4">Павло Сомов</div>
-                    <div class="about__photo-text">Засновник групи компаній Ecobud</div>
+                    <p class="about__photo-text">Засновник групи компаній Ecobud</p>
                 </div>
                 <div class="about__photo-item">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/marya.png" alt="" class="about__photo-img">
                     <div class="about__photo-title h4">Марина Круглова</div>
-                    <div class="about__photo-text">Засновник архітектурного бюро Ecobud Project</div>
+                    <p class="about__photo-text">Засновник архітектурного бюро Ecobud Project</p>
                 </div>
             </div>
             <div class="about__subtitle h3">Наші принципи</div>
@@ -135,32 +135,32 @@ get_header('front'); ?>
                 <div class="service__type-item">
                     <div class="service__type-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="service__type-logo"></div>
                     <div class="service__type-title h3">Будівництво</div>
-                    <div class="service__type-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</div>
+                    <p class="service__type-text p">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
                 </div>
                 <div class="service__type-item">
                     <div class="service__type-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="service__type-logo"></div>
                     <div class="service__type-title h3">Проектування</div>
-                    <div class="service__type-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</div>
+                    <p class="service__type-text p">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
                 </div>
                 <div class="service__type-item">
                     <div class="service__type-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="service__type-logo"></div>
                     <div class="service__type-title h3">Development</div>
-                    <div class="service__type-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</div>
+                    <p class="service__type-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
                 </div>
             </div>
             <div class="service__subtitle h3">Наші можливості</div>
             <p class="service__text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
             <div class="service__technique">
-                <div class="service__technique-title h3">Наш парк техніки<div class="arrow"></div></div>
-                <ul class="service__technique-list">
-                    <li class="service__technique-item">Ескаватор 99999</li>
-                    <li class="service__technique-item">Ескаватор 99999</li>
-                    <li class="service__technique-item">Ескаватор 99999</li>
-                    <li class="service__technique-item">Ескаватор 99999</li>
-                    <li class="service__technique-item">Ескаватор 99999</li>
-                    <li class="service__technique-item">Ескаватор 99999</li>
-                    <li class="service__technique-item">Ескаватор 99999</li>
-                </ul>
+                <button class="service__technique-title h3">Наш парк техніки<span class="arrow"></span></button>
+                <div class="service__technique-list">
+                    <p class="service__technique-item">Ескаватор 99999</p>
+                    <p class="service__technique-item">Ескаватор 99999</p>
+                    <p class="service__technique-item">Ескаватор 99999</p>
+                    <p class="service__technique-item">Ескаватор 99999</p>
+                    <p class="service__technique-item">Ескаватор 99999</p>
+                    <p class="service__technique-item">Ескаватор 99999</p>
+                    <p class="service__technique-item">Ескаватор 99999</p>
+                </div>
             </div>
         </div>
     </div>

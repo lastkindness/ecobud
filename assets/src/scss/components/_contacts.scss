@@ -64,12 +64,22 @@
     }
     &__buttons {
         margin-top: 32px;
+        @include respond-to('mobile') {
+            display: flex;
+            flex-direction: column;
+        }
         &-btn {
             &:nth-child(odd) {
                 margin-right: 40px;
+                @include respond-to('mobile') {
+                    margin: 16px 0;
+                }
             }
             &:nth-child(even) {
                 margin-left: 40px;
+                @include respond-to('mobile') {
+                    margin: 16px 0;
+                }
             }
         }
     }
