@@ -24,6 +24,14 @@ html {
     &.nav-active {
         overflow: hidden;
     }
+    &.with-fancybox {
+        overflow: hidden;
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+    }
 }
 
 body {
@@ -38,16 +46,6 @@ body {
         padding: 0;
     }
 }
-
-/*input, textarea {
-    color: $fontColor;
-    font: 700 14px/18px $fontColor;
-    border: none;
-    margin-top: 16px;
-    @include respond-to('mobile') {
-        font: 400 12px/16px $font;
-    }
-}*/
 
 a img {
     border: none;
@@ -77,6 +75,7 @@ main,
 
 section {
     position: relative;
+    z-index: 1;
 }
 
 form {
@@ -89,15 +88,17 @@ form {
         line-height: 1em;
         background: $white;
         padding: 16px;
-        font: $fontColor;
         font-weight: 700;
         font-size: 14px;
         border-radius: 8px;
         border: 2px solid $borderColor;
+        margin: 0 auto;
         margin-top: 16px;
-        color: $fontColor
+        color: $fontColor;
+        max-width: 416px;
     }
     textarea {
+        margin: 0 auto;
         margin-top: 16px;
         color: $fontColor;
         padding: 16px;
@@ -107,6 +108,7 @@ form {
         border-radius: 8px;
         border: 2px solid $borderColor;
         min-height: 198px;
+        width: 416px;
     }
 }
 
@@ -244,3 +246,25 @@ select::-ms-expand {
         background: transparent;
     }
 }
+
+.fancybox {
+    &__slide {
+        display: block;
+    }
+    &__container {
+        width: 100vw;
+        height: 100vh;
+    }
+    &__backdrop {
+        width: 100vw;
+        height: 100vh;
+    }
+    /*&__carousel {
+        width: 100vw;
+        height: 100vh;
+    }*/
+}
+
+
+
+

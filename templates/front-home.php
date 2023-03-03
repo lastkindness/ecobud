@@ -242,8 +242,32 @@ get_header('front'); ?>
             <div class="contacts__subtitle h3">Приеднуйся до нас</div>
             <p class="contacts__text">Lorem ipsum dolor sit amet consectetur. Nunc adipiscing id sit augue. Tellus ut mi diam et vestibulum euismod.</p>
             <div class="contacts__buttons">
-                <a href="" class="contacts__buttons-btn btn">Як Кліент</a>
-                <a href="" class="contacts__buttons-btn btn">Як Партнер</a>
+                <p><span data-fancybox data-src="#hidden-content" class="contacts__buttons-btn btn">Як Кліент</span></p>
+                <div id="hidden-content" class="contacts__popup_client contacts__popup">
+                    <div class="contacts__popup-title h1">Приеднатися як кліент</div>
+                    <p class="contacts__popup-text">Lorem ipsum dolor sit amet consectetur. Nunc adipiscing id sit augue. Tellus ut mi diam et vestibulum euismod.</p>
+                    <form action="" class="contacts__popup-form">
+                        <input type="text" placeholder="Ім’я" class="contacts__popup-input">
+                        <input type="text" placeholder="Телефон" class="contacts__popup-input">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Повідомлення" class="contacts__popup-textarea"></textarea>
+                        <button class="contacts__popup-btn">Надіслати</button>
+                    </form>
+                </div>
+                <p><span data-fancybox data-src="#hidden-content-1" class="contacts__buttons-btn btn">Як Партнер</span></p>
+                <div id="hidden-content-1" class="contacts__popup_partner contacts__popup">
+                    <div class="contacts__popup-title h1">Приеднатися як партнер</div>
+                    <p class="contacts__popup-text">Lorem ipsum dolor sit amet consectetur. Nunc adipiscing id sit augue. Tellus ut mi diam et vestibulum euismod.</p>
+                    <form action="" class="contacts__popup_partner-form">
+                        <input type="text" placeholder="Ім’я" class="contacts__popup-input">
+                        <input type="text" placeholder="Телефон" class="contacts__popup-input">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Повідомлення" class="contacts__popup-textarea"></textarea>
+                        <div class="contacts__popup-components">
+                            <button class="contacts__popup-btn">Надіслати</button>
+                            <a href="" class="contacts__popup-load">Додати Файл</a>
+                            <a href="" class="contacts__popup-staple"><span class="icon icon-staple"></span></a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
