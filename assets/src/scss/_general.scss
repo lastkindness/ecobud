@@ -71,6 +71,12 @@ main,
     flex-direction: column;
     min-height: 100vh;
     height: 100%;
+    opacity: 0;
+    @include animate(all);
+    &.visible {
+        opacity: 1;
+        @include animate(all);
+    }
 }
 
 section {
@@ -263,8 +269,27 @@ select::-ms-expand {
         width: 100vw;
         height: 100vh;
     }*/
+    .is-close-btn {
+        background: transparent;
+    }
 }
 
+.preloader {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    @include animate(all);
+    &.hide {
+        opacity: 0;
+        @include animate(all);
+    }
+}
 
 
 

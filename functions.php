@@ -58,6 +58,7 @@ function rst_load_assets()
     if ( ! is_admin()) {
         // Styles
         wp_enqueue_style('app', get_template_directory_uri() . '/assets/dist/app.min.css');
+        wp_enqueue_script('preloader', get_template_directory_uri() . '/assets/dist/preloader.min.js', [], '1.0.0', false);
 
         // Scripts
         wp_deregister_script('jquery');

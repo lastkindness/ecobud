@@ -11,8 +11,9 @@ module.exports = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 
     entry: {
+        preloader: './assets/src/js/preloader.js',
         app: './assets/src/js/app.js',
-        blocks: './blocks/entry.js'
+        blocks: './blocks/entry.js',
     },
 
     output: {

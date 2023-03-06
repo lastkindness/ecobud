@@ -1,0 +1,9 @@
+.portfolio {
+    padding: 196px 0 90px;
+    @include respond-to('tablet') {
+        padding: 156px 0 40px;
+    }
+    @include respond-to('mobile') {
+        padding: 100px 0 20px;
+    }
+}

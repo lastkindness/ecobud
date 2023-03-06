@@ -244,6 +244,8 @@ get_header('front'); ?>
             <div class="contacts__buttons">
                 <p><span data-fancybox data-src="#hidden-content" class="contacts__buttons-btn btn">Як Кліент</span></p>
                 <div id="hidden-content" class="contacts__popup_client contacts__popup">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pop-up.svg" alt="" class="contacts__popup-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pop-up-bottom.svg" alt="" class="contacts__popup-img-bottom">
                     <div class="contacts__popup-title h1">Приеднатися як кліент</div>
                     <p class="contacts__popup-text">Lorem ipsum dolor sit amet consectetur. Nunc adipiscing id sit augue. Tellus ut mi diam et vestibulum euismod.</p>
                     <form action="" class="contacts__popup-form">
@@ -255,6 +257,8 @@ get_header('front'); ?>
                 </div>
                 <p><span data-fancybox data-src="#hidden-content-1" class="contacts__buttons-btn btn">Як Партнер</span></p>
                 <div id="hidden-content-1" class="contacts__popup_partner contacts__popup">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pop-up.svg" alt="" class="contacts__popup-img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pop-up-bottom.svg" alt="" class="contacts__popup-img-bottom">
                     <div class="contacts__popup-title h1">Приеднатися як партнер</div>
                     <p class="contacts__popup-text">Lorem ipsum dolor sit amet consectetur. Nunc adipiscing id sit augue. Tellus ut mi diam et vestibulum euismod.</p>
                     <form action="" class="contacts__popup_partner-form">
