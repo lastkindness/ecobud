@@ -12,6 +12,7 @@ import main from "./modules/main"
 import heroSlider from "./modules/hero-slider"
 import burger from "./modules/burger"
 import accoordion from "./modules/accordion"
+import tabs from "./modules/tabs"
 
 
 import '../scss/app.scss';
@@ -21,6 +22,7 @@ $(document).ready(() => {
     heroSlider();
     burger();
     accoordion();
+    tabs();
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
     });

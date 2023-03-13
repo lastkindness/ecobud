@@ -101,6 +101,13 @@
             top: 3%;
             right: 4.2%;
             color: $fontColor;
+            background: transparent;
+            border-radius: 0;
+            @include respond-to('mobile') {
+                height: 32px;
+                width: 34px;
+                justify-content: flex-end;
+            }
         }
         @include respond-to('tablet') {
             width: 90%;
@@ -112,8 +119,12 @@
         &-components {
             display: flex;
             align-items: flex-end;
-            justify-content: flex-start;
-            margin-left: 194px;
+            justify-content: center;
+        }
+        &-title {
+            @include respond-to('mobile-sm') {
+                margin-top: 24px;
+            }
         }
         &-load {
             margin: 0 0 12px 32px;
@@ -134,6 +145,7 @@
             font-size: 14px;
             display: flex;
             flex-direction: row;
+            color: $brandColor;
         }
         &-load {
             display: flex;
