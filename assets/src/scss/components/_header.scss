@@ -87,51 +87,74 @@
                     }
                 }
                 &__lang {
+                    list-style-type: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    a {
+                        text-transform: uppercase;
+                        color: $lightblueColor;
+                    }
                     @include respond-to('mobile') {
                         margin-right: 16px;
                     }
-                    &-slash {
-                        color: $lightblueColor;
-                    }
-                    .active {
-                        color: $lightblueColor;
+                    .lang-item {
+                        &:after {
+                            display: inline-block;
+                            content: '/';
+                            margin: 0 5px;
+                        }
+                        &.current-lang {
+                            a {
+                                color: $fontColor;
+                                cursor: default;
+                                pointer-events: none;
+                            }
+                        }
+                        &:last-child {
+                            &:after {
+                                display: none;
+                            }
+                        }
                     }
                 }
     &__nav {
+        nav,
         ul.header__menu {
             margin: 5px 0 0;
             background: transparent;
             padding: 0;
         }
     }
-    .header__menu, .menu-header-privacy-menu-container {
+    .header__menu, nav {
         @include animate(all);
         @include respond-to('mobile') {
             display: none;
         }
     }
-        &__menu {
-            display: grid;
+    &__menu {
+        display: grid;
+        margin: 0;
+        grid-gap: 5px;
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+        &-item,
+        .menu-item {
             margin: 0;
-            grid-gap: 5px;
-            grid-auto-columns: 1fr;
-            grid-auto-flow: column;
-            &-item {
-                margin: 0;
-                display: flex;
-                height: 44px;
-                justify-content: center;
-                align-items: center;
-                background: rgba(3, 17, 26, 1);
-                opacity: 0.9;
-                @include respond-to("tablet") {
-                    font-size: 14px;
-                }
+            display: flex;
+            height: 44px;
+            justify-content: center;
+            align-items: center;
+            background: rgba(3, 17, 26, 1);
+            opacity: 0.9;
+            @include respond-to("tablet") {
+                font-size: 14px;
             }
-            &-link {
+            a {
                 color: $white;
             }
         }
+    }
 }
 
 
