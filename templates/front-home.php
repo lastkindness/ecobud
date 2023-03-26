@@ -150,9 +150,12 @@ get_header('front'); ?>
             </div>
             <div class="service__subtitle h3">Наші можливості</div>
             <p class="service__text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
-            <div class="service__technique">
-                <button class="service__technique-title h3">Наш парк техніки<span class="arrow"></span></button>
-                <div class="service__technique-list">
+            <div class="service__technique accordion">
+                <h3 class="service__technique-title h3 accordion__title">
+                    <span class="title">Наш парк техніки</span>
+                    <span class="arrow"></span>
+                </h3>
+                <div class="service__technique-list accordion__list">
                     <p class="service__technique-item">Ескаватор 99999</p>
                     <p class="service__technique-item">Ескаватор 99999</p>
                     <p class="service__technique-item">Ескаватор 99999</p>

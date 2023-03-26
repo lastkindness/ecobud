@@ -13,5 +13,4 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.wrapper').classList.add('visible');
         }, 1000);
     }
-    console.log(111111);
 });

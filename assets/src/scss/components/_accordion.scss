@@ -1,0 +1,23 @@
+.accordion {
+    &.active {
+        .accordion {
+            &__list {
+                transition:all 0.2s linear;
+                visibility: visible;
+                height: auto;
+                overflow: none;
+                opacity: 1;
+            }
+        }
+        .arrow {
+            transform: rotate(315deg);
+        }
+    }
+    &__list {
+        visibility: hidden;
+        height:0;
+        overflow:hidden;
+        opacity:0;
+        transition:all 0.2s linear;
+    }
+}

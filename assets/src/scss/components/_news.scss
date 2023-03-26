@@ -2,10 +2,10 @@
     background: $lightblueColor;
     &__img {
         position: absolute;
-        height: 1241px;
-        width: 1690px;
-        top: 22.7%;
-        right: 44%;
+        height: auto;
+        width: auto;
+        bottom: 0;
+        left: 0px;
     }
     &__wrapper {
         padding: 80px 0;
