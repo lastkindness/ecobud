@@ -96,6 +96,7 @@
         left: 50%;
         bottom: unset;
         right: unset;
+        overflow: hidden;
         transform: translate(-50%, -50%);
         &.fancybox__content>.f-button.is-close-btn {
             top: 3%;
@@ -116,6 +117,16 @@
             padding: 20px 0 10px;
             width: 100%;
         }
+        &-img {
+            position: absolute;
+            bottom: 25%;
+            right: -25%;
+        }
+        &-img-bottom {
+            position: absolute;
+            left: -30%;
+            bottom: 0%;
+        }
         &-components {
             display: flex;
             align-items: flex-end;
@@ -128,6 +139,9 @@
         }
         &-load {
             margin: 0 0 12px 32px;
+            @include respond-to('mobile') {
+                font-size: 14px;
+            }
         }
         &-staple {
             font-size: 30px;

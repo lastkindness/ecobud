@@ -1,0 +1,15 @@
+.error {
+    &__wrapper {
+        padding: 280px 0 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include respond-to('tablet') {
+            padding: 220px 0 40px;
+        }
+        @include respond-to('mobile') {
+            padding: 100px 0 20px;
+        }
+    }
+}
