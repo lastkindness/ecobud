@@ -6,6 +6,8 @@
 
 @import "~@fancyapps/ui/dist/fancybox/fancybox.css";
 
+@import '~aos/dist/aos.css';
+
 @import "fonts";
 @import "mixins";
 @import "vars";
@@ -18,18 +20,19 @@
 @import "components/header";
 @import "components/footer";
 @import "components/button";
-@import "components/hero";
-@import "components/about";
-@import "components/service";
-@import "components/project";
-@import "components/news";
-@import "components/contacts";
 @import "components/tabs";
-@import "components/portfolio";
-@import "components/portfolio-link";
-@import "components/other-news";
 @import "components/accordion";
 
+@import "sections/hero";
+@import "sections/about";
+@import "sections/principles";
+@import "sections/service";
+@import "sections/project";
+@import "sections/news";
+@import "sections/contacts";
+@import "sections/portfolio";
+@import "sections/portfolio-link";
+@import "sections/other-news";
 
 @import "pages/404";
 

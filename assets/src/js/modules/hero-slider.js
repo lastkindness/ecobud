@@ -5,9 +5,11 @@ export default () => {
         spaceBetween: 10,
         slidesPerView: 2,
         watchSlidesProgress: true,
+        loop: true,
     });
     var swiper2 = new Swiper(".mySwiper2", {
         spaceBetween: 0,
+        loop: true,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",

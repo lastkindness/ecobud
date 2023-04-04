@@ -101,7 +101,10 @@ form {
         margin: 0 auto;
         margin-top: 16px;
         color: $fontColor;
-        max-width: 416px;
+        width: 416px;
+        @include respond-to('mobile') {
+            width: 100%;
+        }
     }
     textarea {
         margin: 0 auto;
@@ -113,8 +116,11 @@ form {
         font-size: 14px;
         border-radius: 8px;
         border: 2px solid $borderColor;
-        min-height: 198px;
+        height: 198px;
         width: 416px;
+        @include respond-to('mobile') {
+            width: 100%;
+        }
     }
 }
 
@@ -288,6 +294,17 @@ select::-ms-expand {
     &.hide {
         opacity: 0;
         @include animate(all);
+    }
+}
+
+.fancybox-container {
+    touch-action: none;
+}
+
+.wpcf7-form-control-wrap {
+    width: 416px;
+    @include respond-to('mobile') {
+        width: 100%;
     }
 }
 

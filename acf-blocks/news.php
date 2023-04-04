@@ -1,4 +1,4 @@
-<section class="news">
+<section class="news" data-aos="fade-up" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/news.svg" class="news__img">
     <div class="container">
         <div class="news__wrapper">

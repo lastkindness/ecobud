@@ -120,3 +120,5 @@ function svg_upload_allow( $mimes ) {
     $mimes['svg']  = 'image/svg';
     return $mimes;
 }
+
+

@@ -1,4 +1,4 @@
-<section class="project">
+<section class="project" data-aos="fade-up" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project-img.svg" class="project__img">
     <div class="container">
         <div class="project__wrapper">

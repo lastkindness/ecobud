@@ -1,46 +1,35 @@
-<section class="about">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/vector1.svg" class="about__img">
+<section class="about" data-aos="fade-up" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
+    <?php if($bg_image = get_sub_field('bg_image')) : ?>
+        <img src="<?php echo $bg_image['url'];?>" alt="<?php echo $bg_image['alt'];?>" class="about__img">
+    <?php endif ; ?>
     <div class="container">
         <div class="about__wrapper">
-            <div class="about__title h1">Хто ми? </div>
-            <p class="about__text">Eco-bud building group - компанія майбутнього, яка поєднує в собі досвід, креативне мислення та інновації. Компанія стрімко розвивається, тим самим здійснюючи вагомий внесок в розвиток будівельного бізнесу в Україні.</p>
-            <div class="about__subtitle h2">Наша команда</div>
-            <div class="about__photo">
-                <div class="about__photo-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/pavlo.png" alt="" class="about__photo-img">
-                    <div class="about__photo-title h4">Павло Сомов</div>
-                    <p class="about__photo-text">Засновник групи компаній Ecobud</p>
+            <?php if($title = get_sub_field('title')) : ?>
+                <div class="about__title h1"><?php echo $title;?></div>
+            <?php endif ; ?>
+            <?php if($text = get_sub_field('text')) : ?>
+                <p class="about__text"><?php echo $text;?></p>
+            <?php endif ; ?>
+            <?php if($subtitle = get_sub_field('subtitle')) : ?>
+                <div class="about__subtitle h2"><?php echo $subtitle;?></div>
+            <?php endif ; ?>
+            <?php if($items = get_sub_field('items')): ?>
+                <div class="about__photo">
+                    <?php foreach ($items as $item) : ?>
+                        <div class="about__photo-item">
+                            <?php if($photo = $item['photo']) : ?>
+                                <img src="<?php echo $photo['url'];?>" alt="<?php echo $photo['alt'];?>" class="about__photo-img">
+                            <?php endif ; ?>
+                            <?php if($title = $item['title']) : ?>
+                                <div class="about__photo-title h4"><?php echo $title;?></div>
+                            <?php endif ; ?>
+                            <?php if($subtitle = $item['subtitle']) : ?>
+                                <p class="about__photo-text"><?php echo $subtitle;?></p>
+                            <?php endif ; ?>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-                <div class="about__photo-item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/marya.png" alt="" class="about__photo-img">
-                    <div class="about__photo-title h4">Марина Круглова</div>
-                    <p class="about__photo-text">Засновник архітектурного бюро Ecobud Project</p>
-                </div>
-            </div>
-            <div class="about__subtitle h3">Наші принципи</div>
-            <div class="about__principles">
-                <div class="about__principles-item">
-                    <div class="about__principles-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="about__principles-logo"></div>
-                    <div class="about__principles-descr">
-                        <div class="about__principles-title h3">Lorem Ipsum</div>
-                        <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
-                    </div>
-                </div>
-                <div class="about__principles-item">
-                    <div class="about__principles-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="about__principles-logo"></div>
-                    <div class="about__principles-descr">
-                        <div class="about__principles-title h3">Lorem Ipsum</div>
-                        <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
-                    </div>
-                </div>
-                <div class="about__principles-item">
-                    <div class="about__principles-round"><img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/home.svg" alt="" class="about__principles-logo"></div>
-                    <div class="about__principles-descr">
-                        <div class="about__principles-title h3">Lorem Ipsum</div>
-                        <p class="about__principles-text">Lorem ipsum dolor sit amet consectetur. Nunc aliquet netus nulla quam. Id ultrices scelerisque nulla amet faucibus habitant mauris scelerisque. Vitae purus nunc turpis odio tristique nisl nisl sed dui. Amet euismod massa porttitor integer hendrerit.</p>
-                    </div>
-                </div>
-            </div>
+            <?php endif ; ?>
         </div>
     </div>
 </section>
