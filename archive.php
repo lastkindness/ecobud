@@ -20,7 +20,7 @@ get_header();
                     $link = get_the_permalink();
                     $subtitle = get_field('subtitle');
                     ?>
-                    <a href="<?php echo $link;?>" class="other-news__grid-item">
+                    <a href="<?php echo $link;?>" data-aos="fade-up" class="other-news__grid-item">
                         <?php if($img) : ?>
                             <img src="<?php echo $img;?>" alt="post image" class="other-news__grid-img">
                         <?php endif;?>

@@ -6,4 +6,17 @@
     @include respond-to('mobile') {
         padding: 100px 0 20px;
     }
+    &-slider {
+        margin: 50px 0;
+        &__slide {
+            display: block;
+            height: auto;
+        }
+        &__wrapper {
+            align-items: stretch;
+        }
+        &__img {
+            object-fit: cover;
+        }
+    }
 }

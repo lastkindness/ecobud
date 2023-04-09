@@ -13,6 +13,7 @@ import burger from "./modules/burger"
 import accoordion from "./modules/accordion"
 import tabs from "./modules/tabs"
 import file from "./modules/file"
+import slider from "./modules/slider"
 
 
 import '../scss/app.scss';
@@ -27,4 +28,5 @@ $(document).ready(() => {
     accoordion();
     tabs();
     file();
+    slider();
 });

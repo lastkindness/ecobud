@@ -9,8 +9,10 @@ get_header('front'); ?>
         <div class="portfolio-link__wrapper">
             <div class="portfolio-link__banner">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/src/img/project.png" alt="" class="portfolio-link__banner-img">
-                <div class="portfolio-link__banner-title h1">Lorem Ipsum</div>
-                <div class="portfolio-link__banner-subtitle">Lorem Ipsum</div>
+                <div class="portfolio-link__banner-content">
+                    <h1 class="portfolio-link__banner-title h1">Lorem Ipsum</h1>
+                    <h2 class="portfolio-link__banner-subtitle h2">Lorem Ipsum</h2>
+                </div>
             </div>
             <div class="container">
                 <div class="portfolio-link__title h1">Заголовок</div>

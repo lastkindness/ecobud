@@ -17,8 +17,6 @@ get_header('front'); ?>
                         <li>Category</li>
                         <li>Category</li>
                         <li>Category</li>
-                        <li>Category</li>
-                        <li>Category</li>
                     </ul>
                     <div class="tabs__grid__wrap">
                         <div class="tabs__grid active">

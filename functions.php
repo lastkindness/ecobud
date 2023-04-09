@@ -110,6 +110,8 @@ function relaunch_acf_init_blocks()
     }
 }
 
+require_once 'inc/wp-custom-post-types/project.php';
+
 require_once 'src/helpers.php';
 require_once 'src/Hooks/user-creating.php';
 
