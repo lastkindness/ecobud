@@ -9,7 +9,7 @@ get_header(); ?>
     <section class="portfolio-link">
         <div class="portfolio-link__wrapper">
             <?php $img = get_the_post_thumbnail_url(); ?>
-            <div class="portfolio-link__banner">
+            <div data-aos="fade-up" class="portfolio-link__banner">
                 <?php if ($img) { ?>
                     <img src="<?php echo $img;?>" alt="main banner" class="portfolio-link__banner-img">
                 <?php } ?>
@@ -20,14 +20,14 @@ get_header(); ?>
                     <?php } ?>
                 </div>
             </div>
-            <div class="container">
+            <div data-aos="fade-up" class="container">
                 <h6 class="portfolio-link__date"><?php the_date(); ?></h6>
                 <div class="portfolio-link__content">
                     <?php the_post();
                     the_content();?>
                 </div>
             </div>
-            <div class="container">
+            <div data-aos="fade-up" class="container">
                 <?php if ($title = get_field('title')) { ?>
                     <div class="portfolio-link__title h1"><?php echo $title;?></div>
                 <?php } ?>

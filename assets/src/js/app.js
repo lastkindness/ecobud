@@ -14,7 +14,7 @@ import accoordion from "./modules/accordion"
 import tabs from "./modules/tabs"
 import file from "./modules/file"
 import slider from "./modules/slider"
-
+import header from "./modules/header";
 
 import '../scss/app.scss';
 
@@ -29,4 +29,5 @@ $(document).ready(() => {
     tabs();
     file();
     slider();
+    header();
 });

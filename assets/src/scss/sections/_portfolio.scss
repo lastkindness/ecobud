@@ -18,5 +18,18 @@
         &__img {
             object-fit: cover;
         }
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+            @include respond-to('tablet') {
+                display: block;
+            }
+        }
+        &.swiper-nav-active {
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: block;
+            }
+        }
     }
 }

@@ -2,7 +2,7 @@
 get_header();
 
 ?>
-<?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
+<?php if (pll_current_language('slug') != 'uk') : $current_lang = pll_current_language('slug'); endif; ?>
 <section class="other-news">
     <div class="container">
         <div class="other-news__wrapper">

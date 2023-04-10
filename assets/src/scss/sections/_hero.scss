@@ -104,7 +104,7 @@
             @include respond-to('mobile') {
                 left: 24px;
                 width: calc(100% - 48px);
-                bottom: 287px;
+                bottom: 255px;
             }
         }
         &-img {
@@ -131,6 +131,9 @@
             @include respond-to('mobile') {
                 font-size: 32px;
             }
+            @include respond-to('mobile-sm') {
+                font-size: 24px;
+            }
         }
         &-text {
             margin-top: 24px;
@@ -145,6 +148,8 @@
         text-align: center;
         position: relative;
         z-index: 2;
+        cursor: pointer;
+        overflow: hidden;
         @include respond-to('mobile') {
             height: 160px;
         }
@@ -174,6 +179,8 @@
             opacity: 0.6;
             z-index: 0;
             position: relative;
+            transform: scale(1);
+            @include animate(all);
         }
         &-subtitle {
             font-size: 24px;
@@ -186,36 +193,56 @@
             left: 50%;
             top: 50%;
             z-index: 11;
+            line-height: 1.2em;
             width: 100%;
             padding: 0 10px;
             @include respond-to('mobile') {
                 font-size: 16px;
+            }
+            @include respond-to('mobile-sm') {
+                font-size: 14px;
+            }
+        }
+        &:hover {
+            .hero__thumb-img {
+                transform: scale(1.1);
+                @include animate(all);
             }
         }
     }
     &__arrows {
         .swiper-button-prev {
             left: 21%;
-            top: 75%;
+            top: 85%;
             @include respond-to('mobile') {
                 left: 19%;
                 width: 36px;
                 height: 36px;
+                top: 90%;
+                display: none;
                 &:after {
                     font-size: 12px;
                 }
             }
+            @include respond-to('mobile-sm') {
+                display: none;
+            }
         }
         .swiper-button-next {
             right: 21%;
-            top: 75%;
+            top: 85%;
             @include respond-to('mobile') {
                 right: 19%;
                 width: 36px;
                 height: 36px;
+                top: 90%;
+                display: none;
                 &:after {
                     font-size: 12px;
                 }
+            }
+            @include respond-to('mobile-sm') {
+                display: none;
             }
         }
     }

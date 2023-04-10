@@ -12,7 +12,7 @@ $post_id = $wp_query->post->ID;
     <section class="portfolio-link">
         <div class="portfolio-link__wrapper">
             <?php $img = get_the_post_thumbnail_url(); ?>
-            <div class="portfolio-link__banner">
+            <div data-aos="fade-up" class="portfolio-link__banner">
                 <?php if ($img) { ?>
                     <img src="<?php echo $img;?>" alt="main banner" class="portfolio-link__banner-img">
                 <?php } ?>
@@ -23,7 +23,7 @@ $post_id = $wp_query->post->ID;
                     <?php } ?>
                 </div>
             </div>
-            <div class="container">
+            <div data-aos="fade-up" class="container">
                 <?php $terms = get_the_terms($post_id, 'group');
                 if ($terms) {
                     foreach ($terms as $term) {
@@ -35,7 +35,7 @@ $post_id = $wp_query->post->ID;
                     the_content();?>
                 </div>
             </div>
-            <div class="container">
+            <div data-aos="fade-up" class="container">
                 <?php if ($title = get_field('title')) { ?>
                     <div class="portfolio-link__title h1"><?php echo $title;?></div>
                 <?php } ?>
@@ -61,7 +61,7 @@ $post_id = $wp_query->post->ID;
                     <?php } ?>
                 </div>
                 <?php if ($slider = get_field('slider')) { ?>
-                    <div class="portfolio-slider swiper">
+                    <div class="portfolio-slider swiper <?php if(count($slider)>3) : echo 'swiper-nav-active'; endif; ?>">
                         <div class="portfolio-slider__wrapper swiper-wrapper">
                             <?php foreach ($slider as $item) : ?>
                                 <?php if($img = $item['img']) : ?>

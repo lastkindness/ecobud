@@ -73,7 +73,7 @@
 
     </script>
 </div>
-<?php if (pll_current_language('slug') != 'en') : $current_lang = pll_current_language('slug'); endif; ?>
+<?php if (pll_current_language('slug') != 'uk') : $current_lang = pll_current_language('slug'); endif; ?>
 <div class="wrapper">
 <header class="header" id="header">
     <div class="header__wrapper">

@@ -1,4 +1,4 @@
-<section class="news" data-aos="fade-up" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
+<section class="news" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
     <?php if($bg_image = get_sub_field('bg_image')) : ?>
         <img src="<?php echo $bg_image;?>" alt="background image" class="news__img">
     <?php endif ; ?>
@@ -40,7 +40,7 @@
             <?php endif; ?>
 
 
-            <?php if($link = get_sub_field('link')) : ?>
+            <?php if($link = get_sub_field('more_link')) : ?>
                 <a href="<?php echo $link['url'];?>" class="news__btn btn"><?php echo $link['title'];?></a>
             <?php endif ; ?>
         </div>

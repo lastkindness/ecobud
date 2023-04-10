@@ -17,6 +17,9 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        @include respond-to('mobile') {
+            padding: 30px 0;
+        }
     }
     &__title {
         text-align: center;

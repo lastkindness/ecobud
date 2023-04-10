@@ -1,6 +1,6 @@
-<section class="project" data-aos="fade-up" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
+<section class="project" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
     <?php if($bg_image = get_sub_field('bg_image')) : ?>
-        <img src="<?php echo $bg_image;?>" alt="background image" class="project__img">
+        <img src="<?php echo $bg_image['url'];?>" alt="background image" class="project__img">
     <?php endif ; ?>
     <div class="container">
         <div class="project__wrapper">
@@ -32,7 +32,7 @@
                 <?php wp_reset_postdata(); ?>
             <?php endif; ?>
 
-            <?php if($link = get_sub_field('link')) : ?>
+            <?php if($link = get_sub_field('more_link')) : ?>
                 <a href="<?php echo $link['url'];?>" class="project__btn btn"><?php echo $link['title'];?></a>
             <?php endif ; ?>
         </div>

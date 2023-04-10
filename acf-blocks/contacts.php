@@ -18,7 +18,7 @@
                 <p class="contacts__adress"><?php echo $address;?></p>
             <?php endif; ?>
             <?php if($map_link = get_field('map_link', 'option')) : ?>
-                <a href="<?php echo $map_link;?>" class="contacts__map">
+                <a target="_blank" href="<?php echo $map_link;?>" class="contacts__map">
                     <?php if($subtitle_map = get_sub_field('subtitle_map')): ?>
                         <?php echo $subtitle_map;?>
                     <?php endif ; ?>

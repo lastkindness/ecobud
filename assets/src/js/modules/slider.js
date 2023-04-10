@@ -1,7 +1,7 @@
 import Swiper from 'swiper/swiper-bundle.min';
 
 export default () => {
-    const swiper = new Swiper(".swiper", {
+    const swiper = new Swiper(".portfolio-slider.swiper", {
         slidesPerView: 1,
         spaceBetween: 10,
         loop: false,
