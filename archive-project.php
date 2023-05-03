@@ -19,46 +19,56 @@ get_header();
                     <ul class="tabs__nav">
                         <?php foreach ($taxonomies as $taxonomy) { $terms = get_terms($taxonomy); $i = 0;
                             foreach ($terms as $term) {
-                                if($i==0) : echo '<li class="active">';
-                                else : echo '<li>';
-                                endif;
-                                echo $term->name . '</li>';
-                                $i++;
+                                if($term->taxonomy=='group') {
+                                    if($i==0) : echo '<li class="active">';
+                                    else : echo '<li>';
+                                    endif;
+                                    echo $term->name . '</li>';
+                                    $i++;
+                                }
                             }
                         }?>
                     </ul>
                     <div class="tabs__grid__wrap">
                         <?php foreach ($taxonomies as $taxonomy) { $terms = get_terms($taxonomy); $i2 = 0;
                             foreach ($terms as $term) {
-                                if($i2==0) : echo '<div class="tabs__grid active">';
-                                else : echo '<div class="tabs__grid">';
-                                endif;
-                                $args = array(
-                                    'post_type' => 'project',
-                                    'tax_query' => array(
-                                        array(
-                                            'taxonomy' => 'group',
-                                            'field'     => 'term_id',
-                                            'terms' => $term->term_id,
-                                        )
-                                    ),
-                                );
-                                $the_query = new WP_Query($args);
-                                if ($the_query->have_posts()) {
-                                    while ($the_query->have_posts()) {
-                                        $the_query->the_post();
-                                        $title = get_the_title();
-                                        $img = get_the_post_thumbnail_url();
-                                        $link = get_the_permalink();
-                                        $subtitle = get_field('subtitle'); ?>
-                                        <a href="<?php echo $link; ?>" class="tabs__grid-item">
-                                            <img src="<?php echo $img ?>" alt="<?php echo $title; ?>" class="tabs__grid-img">
-                                        </a>
-                                    <?php }
+                                if($term->taxonomy=='group') {
+                                    if($i2==0) : echo '<div class="tabs__grid active">';
+                                    else : echo '<div class="tabs__grid">';
+                                    endif;
+                                    $args = array(
+                                        'post_type' => 'project',
+                                        'tax_query' => array(
+                                            array(
+                                                'taxonomy' => 'group',
+                                                'field'     => 'term_id',
+                                                'terms' => $term->term_id,
+                                            )
+                                        ),
+                                    );
+                                    $the_query = new WP_Query($args);
+                                    if ($the_query->have_posts()) {
+                                        while ($the_query->have_posts()) {
+                                            $the_query->the_post();
+                                            $title = get_the_title();
+                                            $img = get_the_post_thumbnail_url();
+                                            $link = get_the_permalink();
+                                            $subtitle = get_field('subtitle'); ?>
+                                            <a href="<?php echo $link; ?>" class="tabs__grid-item">
+                                                <img src="<?php echo $img ?>" alt="<?php echo $title; ?>" class="tabs__grid-img">
+                                                <div class="tabs__grid-content">
+                                                    <h4 class="tabs__grid-title h4"><?php echo $title;?></h4>
+                                                    <?php if($subtitle) : ?>
+                                                        <div class="tabs__grid-subtitle p"><?php echo $subtitle;?></div>
+                                                    <?php endif;?>
+                                                </div>
+                                            </a>
+                                        <?php }
+                                    }
+                                    wp_reset_postdata();
+                                    echo '</div>';
+                                    $i2++;
                                 }
-                                wp_reset_postdata();
-                                echo '</div>';
-                                $i2++;
                             }
                         }?>
                     </div>

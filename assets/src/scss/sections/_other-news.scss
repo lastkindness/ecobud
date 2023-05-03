@@ -32,6 +32,7 @@
         }
         &-item {
             grid-column: 1/3;
+            overflow: hidden;
             @include respond-to('mobile') {
                 grid-column: 1/2;
                 min-height: 100px;
@@ -76,17 +77,26 @@
                     grid-column: 1/2;
                 }
             }
+            &:hover {
+                .other-news-img {
+                    transform: scale(1.1);
+                    @include animate(all);
+                }
+            }
         }
 
         &-img {
             object-fit: cover;
             z-index: 0;
             position: relative;
+            transform: scale(1);
+            @include animate(all);
         }
 
         &-title {
             color: $white;
             text-align: left;
+            font-weight: 400;
             @include respond-to('mobile') {
                 font-size: 14px;
             }
@@ -96,6 +106,7 @@
             display: flex;
             line-height: 1.25em;
             margin: 10px 0 0;
+            font-weight: 400;
             @include respond-to('mobile') {
                 font-size: 12px;
                 bottom: 0;

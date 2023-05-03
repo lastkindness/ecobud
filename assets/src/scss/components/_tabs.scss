@@ -10,7 +10,7 @@
             cursor: pointer;
             padding: 16px 24px;
             margin: 0 24px 0 0;
-            color: $greenColor;
+            color: $greyColor;
             text-transform: uppercase;
             @include respond-to('desktop-m') {
                 font-size: 16px;
@@ -21,11 +21,13 @@
                 font-size: 12px;
             }
             &.active {
+                color: $greenColor;
                 border: 2px solid $greenColor;
                 border-radius: 8px;
             }
             &:hover {
-
+                color: $greenColor;
+                @include animate(all);
             }
         }
     }
@@ -94,9 +96,15 @@
                 }
             }
             &:hover {
-                .tabs__grid-img {
-                    transform: scale(1.1);
-                    @include animate(all);
+                .tabs__grid {
+                    &-content {
+                        opacity: 1;
+                        @include animate(all);
+                    }
+                    &-img {
+                        transform: scale(1.1);
+                        @include animate(all);
+                    }
                 }
             }
         }
@@ -118,6 +126,45 @@
         }
         &__wrap {
             position: relative;
+        }
+        &-subtitle,
+        &-title {
+            font-weight: 400;
+            color: $white;
+            margin: 0;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+        }
+        &-content {
+            opacity: 0;
+            @include animate(all);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            z-index: 1;
+            text-align: left;
+            padding: 20px;
+            &:before {
+                display: block;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 0;
+                background: linear-gradient(180deg, rgba(98, 98, 98, 0.1) 35.94%, #383838 100%);
+            }
         }
     }
 }

@@ -94,6 +94,7 @@
         &-title {
             color: $white;
             text-align: left;
+            font-weight: 400;
             @include respond-to('mobile') {
                 font-size: 14px;
             }
@@ -103,6 +104,7 @@
             display: flex;
             line-height: 1.25em;
             margin: 10px 0 0;
+            font-weight: 400;
             @include respond-to('mobile') {
                 font-size: 12px;
                 bottom: 0;

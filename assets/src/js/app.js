@@ -4,7 +4,6 @@
  */
 
 import AOS from 'aos'
-
 import { Fancybox } from "@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 
 import main from "./modules/main"

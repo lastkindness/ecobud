@@ -51,6 +51,7 @@
         justify-content: center;
         flex-wrap: wrap;
         max-width: 1064px;
+        margin: 0 auto;
         @include respond-to('mobile') {
             flex-direction: column;
         }
@@ -63,6 +64,9 @@
             align-items: center;
             @include respond-to('mobile') {
                 width: 100%;
+            }
+            &:first-child {
+                width: 55%;
             }
         }
         &-round {

@@ -25,7 +25,7 @@ get_header();
                             <img src="<?php echo $img;?>" alt="post image" class="other-news__grid-img">
                         <?php endif;?>
                         <div class="other-news__grid-content">
-                            <div class="other-news__grid-title h1"><?php echo $title;?></div>
+                            <h3 class="other-news__grid-title h3"><?php echo $title;?></h3>
                             <?php if($subtitle) : ?>
                                 <div class="other-news__grid-subtitle"><?php echo $subtitle;?></div>
                             <?php endif;?>

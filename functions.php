@@ -61,7 +61,8 @@ function rst_load_assets()
         wp_enqueue_script('preloader', get_template_directory_uri() . '/assets/dist/preloader.min.js', [], '1.0.0', false);
 
         // Scripts
-        wp_enqueue_script('preloader', get_template_directory_uri() . '/assets/dist/preloader.js', [], '', false);
+        wp_enqueue_script('lottie-player', get_template_directory_uri() . '/assets/lib/lottie-player.js', [], '', false);
+        wp_enqueue_script('preloader', get_template_directory_uri() . '/assets/dist/preloader.js', ['lottie-player'], '', false);
         wp_deregister_script('jquery');
         wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, null, false);
         wp_enqueue_script('jquery');

@@ -9,6 +9,44 @@ get_header();
 global $wp_query;
 $post_id = $wp_query->post->ID;
 ?>
+    <section class="hero">
+        <?php if($slider = get_field('slider')): ?>
+            <div class="hero__wrapper">
+                <div class="hero__slider <?php if(count($slider)>1) : echo 'swiper mySwiper2'; endif; ?>">
+                    <div class="hero__slides <?php if(count($slider)>1) : echo 'swiper-wrapper'; endif; ?>">
+                        <?php foreach ($slider as $item) : ?>
+                            <div class="hero__slide <?php if (count($slider)>1) : echo ' swiper-slide'; endif ; ?>">
+                                <?php if($img = $item['img']) : ?>
+                                    <img src="<?php echo $img['url'];?>" alt="<?php echo $img['alt'];?>" class="hero__slide-img"/>
+                                <?php endif ; ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                    <?php if (count($slider)>1) : ?>
+                        <div class="hero__pagination swiper-pagination"></div>
+                    <?php endif ; ?>
+                </div>
+                <?php if (count($slider)>1) : ?>
+                    <div class="hero__gallery swiper mySwiper">
+                        <div class="hero__thumbs swiper-wrapper">
+                            <?php foreach ($slider as $item) : ?>
+                                <div class="hero__thumb swiper-slide">
+                                    <?php if($img = $item['img']) : ?>
+                                        <img src="<?php echo $img['url'];?>" alt="<?php echo $img['url'];?>" class="hero__thumb-img">
+                                    <?php endif ; ?>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                        <div class="hero__arrows">
+                            <div class="swiper-button-prev hero__thumb-arrowl"></div>
+                            <div class="swiper-button-next hero__thumb-arrowr"></div>
+                        </div>
+                    </div>
+                <?php endif ; ?>
+            </div>
+        <?php endif ; ?>
+    </section>
+
     <section class="portfolio-link">
         <div class="portfolio-link__wrapper">
             <?php $img = get_the_post_thumbnail_url(); ?>
@@ -60,25 +98,26 @@ $post_id = $wp_query->post->ID;
                         <?php endforeach; ?>
                     <?php } ?>
                 </div>
-                <?php if ($slider = get_field('slider')) { ?>
-                    <div class="portfolio-slider swiper <?php if(count($slider)>3) : echo 'swiper-nav-active'; endif; ?>">
-                        <div class="portfolio-slider__wrapper swiper-wrapper">
-                            <?php foreach ($slider as $item) : ?>
-                                <?php if($img = $item['img']) : ?>
-                                    <a class="portfolio-slider__slide swiper-slide" href="<?php echo $img['url'];?>" data-fancybox="gallery">
-                                        <img src="<?php echo $img['url'];?>" alt="<?php echo $img['alt'];?>" class="portfolio-slider__img">
-                                    </a>
-                                <?php endif ; ?>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="swiper-button-prev icon icon-arrowr"></div>
-                        <div class="swiper-button-next icon icon-arrowr"></div>
-                        <div class="portfolio-slider__pagination swiper-pagination"></div>
-                    </div>
-                <?php } ?>
             </div>
         </div>
     </section>
+
+    <?php /*if ($slider = get_field('slider')) { */?><!--
+        <section class="portfolio-slider swiper <?php /*if(count($slider)>3) : echo 'swiper-nav-active'; endif; */?>">
+            <div class="portfolio-slider__wrapper swiper-wrapper">
+                <?php /*foreach ($slider as $item) : */?>
+                    <?php /*if($img = $item['img']) : */?>
+                        <a class="portfolio-slider__slide swiper-slide" href="<?php /*echo $img['url'];*/?>" data-fancybox="gallery">
+                            <img src="<?php /*echo $img['url'];*/?>" alt="<?php /*echo $img['alt'];*/?>" class="portfolio-slider__img">
+                        </a>
+                    <?php /*endif ; */?>
+                <?php /*endforeach; */?>
+            </div>
+            <div class="swiper-button-prev icon icon-arrowr"></div>
+            <div class="swiper-button-next icon icon-arrowr"></div>
+            <div class="portfolio-slider__pagination swiper-pagination"></div>
+        </section>
+    --><?php /*} */?>
 <?php
 /**
  * Include footer.php of footer-XXX.php for custom page

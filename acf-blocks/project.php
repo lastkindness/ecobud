@@ -26,6 +26,12 @@
                             <?php if($img) : ?>
                                 <img src="<?php echo $img;?>" alt="Project Image" class="project__grid-img">
                             <?php endif;?>
+                            <div class="project__grid-content">
+                                <h4 class="project__grid-title h4"><?php echo $title;?></h4>
+                                <?php if($subtitle) : ?>
+                                    <div class="project__grid-subtitle p"><?php echo $subtitle;?></div>
+                                <?php endif;?>
+                            </div>
                         </a>
                     <?php endwhile; ?>
                 </div>

@@ -21,7 +21,7 @@ get_header(); ?>
                 </div>
             </div>
             <div data-aos="fade-up" class="container">
-                <h6 class="portfolio-link__date"><?php the_date(); ?></h6>
+<!--                <h6 class="portfolio-link__date"><?php the_date(); ?></h6>-->
                 <div class="portfolio-link__content">
                     <?php the_post();
                     the_content();?>

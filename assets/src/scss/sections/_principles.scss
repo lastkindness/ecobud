@@ -12,6 +12,7 @@
     &__title {
         text-align: center;
         text-transform: capitalize;
+        color: $brandColor;
     }
     &__subtitle {
         margin-top: 80px;
@@ -19,16 +20,29 @@
     }
     &__grid {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items: stretch;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1064px;
+        margin: 0 auto;
         @include respond-to("mobile") {
             width: 100%;
         }
     }
     &__item {
-        display: flex;
         text-align: left;
         margin-top: 24px;
+        padding: 0 16px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include respond-to('mobile') {
+            width: 100%;
+        }
+        &:first-child {
+            width: 55%;
+        }
     }
     &__round {
         display: flex;
@@ -59,14 +73,10 @@
     }
     &__descr {
         max-width: 854px;
-        margin-left: 24px;
-    }
-    &__title {
-        text-align: left;
-        color: $brandColor;
+        margin: 0;
     }
     &__text {
         margin-top: 16px;
-        text-align: left;
+        text-align: center;
     }
 }

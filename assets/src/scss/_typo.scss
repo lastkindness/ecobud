@@ -110,6 +110,7 @@ h2 {
     font-family: $fontMontserrat;
     font-weight: 700;
     font-size: 38px;
+
     @include respond-to('desktop') {
         font-size: 32px;
     }

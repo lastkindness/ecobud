@@ -28,7 +28,7 @@
                             <img src="<?php echo $img;?>" alt="Post Image" class="news__grid-img">
                         <?php endif;?>
                         <div class="news__grid-content">
-                            <div class="news__grid-title h1"><?php echo $title;?></div>
+                            <h3 class="news__grid-title h3"><?php echo $title;?></h3>
                             <?php if($subtitle) : ?>
                                 <div class="news__grid-subtitle p"><?php echo $subtitle;?></div>
                             <?php endif;?>

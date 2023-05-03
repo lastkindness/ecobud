@@ -315,5 +315,9 @@ select::-ms-expand {
     }
 }
 
+body .lazyloaded {
+    @include animate(all);
+}
+
 
 

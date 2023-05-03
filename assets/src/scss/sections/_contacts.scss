@@ -18,6 +18,12 @@
         height: 32px;
         border-radius: 100%;
         border: 2px solid $brandColor;
+        opacity: 1;
+        @include animate(all);
+        &:hover {
+            opacity: 0.7;
+            @include animate(all);
+        }
     }
     &__facebook {
         color: $brandColor;
@@ -49,9 +55,9 @@
         margin: 32px 0 24px;
     }
     &__map {
-        text-decoration-line: underline;
+        //text-decoration-line: underline;
         .icon-map {
-            margin-left: 20px;
+            margin-left: 8px;
         }
     }
     &__subtitle {
@@ -63,7 +69,7 @@
         margin: 24px 0 0;
     }
     &__buttons {
-        margin-top: 32px;
+        margin: 32px -40px 0 0;
         display: flex;
         flex-direction: row;
         @include respond-to('mobile') {

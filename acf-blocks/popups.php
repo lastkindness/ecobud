@@ -10,7 +10,7 @@
             <div class="contacts__buttons">
                 <?php  if( have_rows('client')): while(have_rows('client')): the_row(); ?>
                     <?php if($title = get_sub_field('title')): ?>
-                        <p><span data-fancybox data-src="#hidden-content" class="contacts__buttons-btn btn"><?php echo $title;?></span></p>
+                        <span data-fancybox data-src="#hidden-content" class="contacts__buttons-btn btn"><?php echo $title;?></span>
                     <?php endif ; ?>
                     <div id="hidden-content" class="contacts__popup_client contacts__popup">
                         <?php if($bgimg = get_sub_field('bgimg')): ?>
@@ -32,7 +32,7 @@
                 <?php endwhile; endif; ?>
                 <?php if(have_rows('partner')): while(have_rows('partner')): the_row(); ?>
                     <?php if($title = get_sub_field('title')): ?>
-                        <p><span data-fancybox data-src="#hidden-content-1" class="contacts__buttons-btn btn"><?php echo $title;?></span></p>
+                        <span data-fancybox data-src="#hidden-content-1" class="contacts__buttons-btn btn"><?php echo $title;?></span>
                     <?php endif ; ?>
                     <div id="hidden-content-1" class="contacts__popup_partner contacts__popup">
                         <?php if($bgimg = get_sub_field('bgimg')): ?>
