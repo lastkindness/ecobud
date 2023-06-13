@@ -7,7 +7,7 @@ get_header();
     <div class="container">
         <div class="portfolio__wrapper">
             <h1 class="portfolio__title h1">
-                <?php if ($current_lang == 'en') {
+                <?php if (pll_current_language('slug') == 'en') {
                     echo 'Projects';
                 } else {
                     echo 'Проекти';

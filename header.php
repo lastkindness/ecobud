@@ -18,8 +18,8 @@
         #loader,
         #load{
             background-color:#fff;
-            width: 40%;
-            height: 40%;
+            width: 15%;
+            height: auto;
             align-items: center;
             justify-content: center;
             overflow: hidden;
@@ -28,11 +28,26 @@
             opacity: 1;
             display: none;
             flex-direction: column;
+            @media (max-width: 1024px) {
+                width: 60%;
+                height: auto;
+            }
+        }
+        .preloader #loader img {
+            object-position: 50% 100%;
+        }
+        .preloader lottie-player {
+            width: 100% !important;
+            height: auto !important;
         }
         .preloader {
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .preloader img,
+        .preloader picture {
+            object-fit: contain;
         }
         .preloader.lottie #load {
             display: flex;
@@ -51,12 +66,22 @@
         <lottie-player src="<?php echo get_template_directory_uri(); ?>/assets/img/data.json" background="transparent" speed="1" style="width: 1023px; height: 385px;" loop autoplay></lottie-player>
     </div>
     <div id="loader">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/load.svg" alt="loader-image">
         <lottie-player src="<?php echo get_template_directory_uri(); ?>/assets/img/load.json" background="transparent" speed="1" style="width: 229px; height: 100px;" loop autoplay></lottie-player>
     </div>
 </div>
-<?php if (pll_current_language('slug') != 'uk') : $current_lang = pll_current_language('slug'); endif; ?>
+<?php if (pll_current_language('slug') != 'uk') : $current_lang = pll_current_language('slug'); else: $current_lang = '';  endif; ?>
 <div class="wrapper">
 <header class="header" id="header">
+    <div class="header__error">
+        <div class="container">
+            <?php if (pll_current_language('slug') == 'en') {
+                echo 'Attention, the site is under technical maintenance!';
+            } else {
+                echo 'Увага! На сайті ведуться технічні роботи!';
+            }?>
+        </div>
+    </div>
     <div class="header__wrapper">
         <div class="header__head">
             <div class="container">

@@ -13,18 +13,24 @@ get_header(); ?>
                 <?php if ($img) { ?>
                     <img src="<?php echo $img;?>" alt="main banner" class="portfolio-link__banner-img">
                 <?php } ?>
-                <div class="portfolio-link__banner-content">
-                    <h1 class="portfolio-link__banner-title h1"><?php the_title(); ?></h1>
-                    <?php if ($sub_title = get_field('subtitle')) { ?>
-                        <h2 class="portfolio-link__banner-subtitle"><?php echo $sub_title;?></h2>
-                    <?php } ?>
+                <div data-aos="fade-up" class="container">
+                    <div class="portfolio-link__banner-content">
+                        <!--                <h6 class="portfolio-link__date"><?php the_date(); ?></h6>-->
+                        <?php if (pll_current_language('slug') == 'en') {?>
+                            <a href="/en/category/news-en/" class="btn">All News</a>
+                        <?php }
+                        else {?><a href="/category/news-uk/" class="btn">Всі статті</a><?php }?>
+                        <h1 class="portfolio-link__banner-title h1"><?php the_title(); ?></h1>
+                        <?php if ($sub_title = get_field('subtitle')) { ?>
+                            <h2 class="portfolio-link__banner-subtitle"><?php echo $sub_title;?></h2>
+                        <?php } ?>
+                    </div>
                 </div>
-            </div>
-            <div data-aos="fade-up" class="container">
-<!--                <h6 class="portfolio-link__date"><?php the_date(); ?></h6>-->
-                <div class="portfolio-link__content">
-                    <?php the_post();
-                    the_content();?>
+                <div data-aos="fade-up" class="container">
+                    <div class="portfolio-link__content">
+                        <?php the_post();
+                        the_content();?>
+                    </div>
                 </div>
             </div>
             <div data-aos="fade-up" class="container">

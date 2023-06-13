@@ -11,6 +11,32 @@
             font-size: 12px;
         }
     }
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 0 20px;
+        @include respond-to("tablet") {
+            flex-wrap: wrap;
+        }
+        .content {
+            width: 450px;
+            text-align: left;
+            @include respond-to("tablet") {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .contacts__icons {
+            margin: 0;
+            @include respond-to("tablet") {
+                margin: 20px 0 0;
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
 }
 
 

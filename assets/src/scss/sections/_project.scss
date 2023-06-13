@@ -97,7 +97,7 @@
             z-index: 0;
         }
         &-content {
-            opacity: 0;
+            opacity: 1;
             @include animate(all);
             top: 0;
             bottom: 0;

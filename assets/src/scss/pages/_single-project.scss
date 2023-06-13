@@ -1,0 +1,32 @@
+.single-project {
+    .hero {
+        &__gallery {
+            width: 300px;
+        }
+        &__thumb {
+            height: 90px;
+            &-img {
+                opacity: 1;
+            }
+        }
+        &__arrows {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: auto;
+            padding: 0 20px;
+            & > div {
+                position: static;
+                margin: 0;
+                transform: unset;
+            }
+        }
+        &__gallery {
+            bottom: 120px;
+        }
+    }
+}

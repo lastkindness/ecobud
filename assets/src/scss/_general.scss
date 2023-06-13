@@ -42,6 +42,9 @@ body {
     font-size: 20px;
     line-height: 1.6em;
     color: $fontColor;
+    @include respond-to('desktop') {
+        font-size: 16px;
+    }
     &.home {
         padding: 0;
     }
@@ -300,6 +303,10 @@ select::-ms-expand {
     @include animate(all);
     &.hide {
         opacity: 0;
+        @include animate(all);
+    }
+    &.none {
+        display: none;
         @include animate(all);
     }
 }

@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.wrapper').classList.add('visible');
             preloader.classList.add('hide');
             setTimeout(function() {
-                preloader.classList.add('none');
+               preloader.classList.add('none');
             }, 4000);
         }, 4000);
     } else {

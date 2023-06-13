@@ -223,6 +223,44 @@
             "maxlength": ""
         },
         {
+            "key": "field_6487c175ed27b",
+            "label": "Footer Content UA",
+            "name": "footer_contentuk",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6487c18fed27c",
+            "label": "Footer Content EN",
+            "name": "footer_contenten",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_641f9df40613a",
             "label": "Copyright ©",
             "name": "copyright",
@@ -259,5 +297,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1679870050
+    "modified": 1686618561
 }

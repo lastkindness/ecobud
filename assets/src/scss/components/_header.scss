@@ -8,6 +8,14 @@
     &__wrapper {
 
     }
+    &__error {
+        padding: 10px 50px;
+        background-color: orangered;
+        font-size: 16px;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+    }
     &__burger {
         display: none;
         @include respond-to('mobile') {

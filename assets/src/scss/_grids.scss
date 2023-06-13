@@ -2,6 +2,7 @@
     max-width: 1680px;
     margin: 0 auto;
     display: block;
+    width: 100%;
     @include respond-to('desktop-m') {
         max-width: 1240px;
     }

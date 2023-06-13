@@ -9,6 +9,7 @@ get_header();
 global $wp_query;
 $post_id = $wp_query->post->ID;
 ?>
+<?php if (pll_current_language('slug') != 'uk') : $current_lang = pll_current_language('slug'); else: $current_lang = '';  endif; ?>
     <section class="hero">
         <?php if($slider = get_field('slider')): ?>
             <div class="hero__wrapper">
@@ -25,6 +26,10 @@ $post_id = $wp_query->post->ID;
                     <?php if (count($slider)>1) : ?>
                         <div class="hero__pagination swiper-pagination"></div>
                     <?php endif ; ?>
+                    <div class="hero__arrows">
+                        <div class="swiper-button-prev hero__thumb-arrowl"></div>
+                        <div class="swiper-button-next hero__thumb-arrowr"></div>
+                    </div>
                 </div>
                 <?php if (count($slider)>1) : ?>
                     <div class="hero__gallery swiper mySwiper">
@@ -36,10 +41,6 @@ $post_id = $wp_query->post->ID;
                                     <?php endif ; ?>
                                 </div>
                             <?php endforeach; ?>
-                        </div>
-                        <div class="hero__arrows">
-                            <div class="swiper-button-prev hero__thumb-arrowl"></div>
-                            <div class="swiper-button-next hero__thumb-arrowr"></div>
                         </div>
                     </div>
                 <?php endif ; ?>
@@ -55,24 +56,38 @@ $post_id = $wp_query->post->ID;
                     <img src="<?php echo $img;?>" alt="main banner" class="portfolio-link__banner-img">
                 <?php } ?>
                 <div class="portfolio-link__banner-content">
-                    <h1 class="portfolio-link__banner-title h1"><?php the_title(); ?></h1>
-                    <?php if ($sub_title = get_field('subtitle')) { ?>
-                        <h2 class="portfolio-link__banner-subtitle"><?php echo $sub_title;?></h2>
-                    <?php } ?>
+                    <div data-aos="fade-up" class="container">
+                        <?php if (pll_current_language('slug') == 'en') {?>
+                            <a href="/en/project/" class="btn">All Projects</a>
+                        <?php } else {?><a href="/project" class="btn">Всі проекти</a><?php }?>
+                        <?php /*$terms = get_the_terms($post_id, 'group');
+                        if ($terms) {*/?><!--
+                            <h6 class="portfolio-link__date">
+                                <?php /*foreach ($terms as $key => $term) {
+                                    if ($key == count($terms)-1) {
+                                        echo $term->name;
+                                    } else if ($key == 0) {
+
+                                    } else {
+                                        echo $term->name . ' & ';
+                                    }
+                                } */?>
+                            </h6>
+                        --><?php /* }*/?>
+                        <h1 class="portfolio-link__banner-title h1"><?php the_title(); ?></h1>
+                        <?php if ($sub_title = get_field('subtitle')) { ?>
+                            <h2 class="portfolio-link__banner-subtitle"><?php echo $sub_title;?></h2>
+                        <?php } ?>
+                    </div>
                 </div>
             </div>
+            <?php if ($content = get_field('content')) { ?>
             <div data-aos="fade-up" class="container">
-                <?php $terms = get_the_terms($post_id, 'group');
-                if ($terms) {
-                    foreach ($terms as $term) {
-                        echo '<h6 class="portfolio-link__date">' . $term->name . '</h6>';
-                    }
-                }?>
                 <div class="portfolio-link__content">
-                    <?php the_post();
-                    the_content();?>
+                    <?php echo $content;?>
                 </div>
             </div>
+            <?php } ?>
             <div data-aos="fade-up" class="container">
                 <?php if ($title = get_field('title')) { ?>
                     <div class="portfolio-link__title h1"><?php echo $title;?></div>

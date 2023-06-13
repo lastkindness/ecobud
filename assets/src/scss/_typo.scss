@@ -15,6 +15,9 @@ blockquote p {
     font-size: 20px;
     line-height: 1.6em;
     color: $greyColor;
+    @include respond-to('desktop') {
+        font-size: 16px;
+    }
     &:last-child {
         margin-bottom: 0;
     }
@@ -94,7 +97,6 @@ h1 {
     font-family: $fontMontserrat;
     font-weight: 700;
     font-size: 44px;
-    margin: 0;
     @include respond-to('desktop') {
         font-size: 42px;
     }
@@ -110,7 +112,6 @@ h2 {
     font-family: $fontMontserrat;
     font-weight: 700;
     font-size: 38px;
-
     @include respond-to('desktop') {
         font-size: 32px;
     }

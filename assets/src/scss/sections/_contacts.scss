@@ -146,10 +146,23 @@
             display: flex;
             align-items: flex-end;
             justify-content: center;
+            @include respond-to('mobile-sm') {
+                flex-direction: column;
+            }
             p {
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
+                @include respond-to('mobile-sm') {
+                    display: block;
+                }
+            }
+        }
+        &-comment {
+            p {
+                font-size: 10px;
+                text-align: center;
+                margin: 10px 0;
             }
         }
         &-title {
@@ -186,6 +199,10 @@
             display: flex;
             flex-direction: row;
             color: $brandColor;
+            @include respond-to('mobile-sm') {
+                width: 100%;
+                margin: 0 auto 10px !important;
+            }
         }
         &-load {
             display: flex;
@@ -206,8 +223,10 @@
                         margin: 0;
                     }
                     .text {
-                        font-size: 20px;
                         padding: 0 5px;
+                        max-width: 250px;
+                        line-height: 1em;
+                        font-size: 12px;
                     }
                     .icon {
                         font-size: 30px;

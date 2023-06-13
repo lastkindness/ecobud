@@ -7,7 +7,7 @@ get_header();
     <div class="container">
         <div class="other-news__wrapper">
             <h1 class="other-news__title h1">
-                <?php if ($current_lang == 'en') {
+                <?php if (pll_current_language('slug') == 'en') {
                     echo 'News';
                 } else {
                     echo 'Новини';
