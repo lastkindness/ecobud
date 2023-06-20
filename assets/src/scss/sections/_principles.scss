@@ -43,6 +43,9 @@
         }
         &:first-child {
             width: 55%;
+            @include respond-to('mobile') {
+                width: 100%;
+            }
         }
     }
     &__round {

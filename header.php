@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="<?php echo get_locale(); ?>">
+<html id="html" lang="<?php echo get_locale(); ?>">
 <head>
     <title><?php echo wp_get_document_title(); ?></title>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">

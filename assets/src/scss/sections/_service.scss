@@ -8,6 +8,9 @@
             z-index: 0;
             width: auto;
             height: auto;
+            @include respond-to('mobile') {
+                top: 0;
+            }
         }
         &-middle {
             position: absolute;
@@ -16,6 +19,9 @@
             z-index: 0;
             width: auto;
             height: auto;
+            @include respond-to('mobile') {
+                top: -100%;
+            }
         }
         &-bottom {
             position: absolute;
@@ -66,6 +72,9 @@
             }
             &:first-child {
                 width: 55%;
+                @include respond-to('mobile') {
+                    width: 100%;
+                }
             }
         }
         &-round {

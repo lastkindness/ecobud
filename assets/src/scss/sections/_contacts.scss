@@ -73,7 +73,7 @@
         display: flex;
         flex-direction: row;
         @include respond-to('mobile') {
-            margin-top: 12px;
+            margin: 12px 0 0;
             display: flex;
             flex-direction: column;
         }
@@ -98,16 +98,22 @@
     }
     &__popup {
         display: none;
-        width: 42%;
+        width: 50%;
         height: auto;
         padding: 120px 20px 80px;
         margin: 0;
-        top: 50%;
+        top: -50%;
         left: 50%;
         bottom: unset;
         right: unset;
-        overflow: hidden;
+        overflow: visible;
         transform: translate(-50%, -50%);
+        position: absolute;
+        background-color: $lightblueColor;
+        z-index: 1;
+        &.active {
+            display: block;
+        }
         &.fancybox__content>.f-button.is-close-btn {
             top: 3%;
             right: 4.2%;
@@ -125,10 +131,39 @@
         }
         @include respond-to('tablet') {
             width: 90%;
+            top: unset;
         }
         @include respond-to('mobile') {
             padding: 20px 20px 10px;
             width: 100%;
+        }
+        &-close {
+            position: absolute;
+            right: 32px;
+            top: 32px;
+            width: 32px;
+            height: 32px;
+            z-index: 10;
+            cursor: pointer;
+            @include respond-to('mobile') {
+                right: 20px;
+                top: 20px;
+            }
+            &:before,
+            &:after {
+                position: absolute;
+                left: 15px;
+                content: ' ';
+                height: 33px;
+                width: 2px;
+                background-color: $fontColor;
+            }
+            &:before {
+                transform: rotate(45deg);
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
         }
         &-img {
             position: absolute;

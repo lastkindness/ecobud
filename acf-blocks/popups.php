@@ -1,4 +1,4 @@
-<section data-aos="fade-up" class="contacts" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
+<section class="contacts" <?php if($id = get_sub_field('id')): echo 'id="' . $id . '"'; endif;?>>
     <div class="container">
         <div class="contacts__wrapper">
             <?php if($title = get_sub_field('title')): ?>
@@ -10,9 +10,10 @@
             <div class="contacts__buttons">
                 <?php  if( have_rows('client')): while(have_rows('client')): the_row(); ?>
                     <?php if($title = get_sub_field('title')): ?>
-                        <span data-fancybox data-src="#hidden-content" class="contacts__buttons-btn btn"><?php echo $title;?></span>
+                        <span data-popup="hidden-content" class="contacts__buttons-btn btn"><?php echo $title;?></span>
                     <?php endif ; ?>
                     <div id="hidden-content" class="contacts__popup_client contacts__popup">
+                        <div class="contacts__popup-close"></div>
                         <?php if($bgimg = get_sub_field('bgimg')): ?>
                             <img src="<?php echo $bgimg;?>" alt="background image" class="contacts__popup-img">
                         <?php endif ; ?>
@@ -32,9 +33,10 @@
                 <?php endwhile; endif; ?>
                 <?php if(have_rows('partner')): while(have_rows('partner')): the_row(); ?>
                     <?php if($title = get_sub_field('title')): ?>
-                        <span data-fancybox data-src="#hidden-content-1" class="contacts__buttons-btn btn"><?php echo $title;?></span>
+                        <span data-popup="hidden-content-1" class="contacts__buttons-btn btn"><?php echo $title;?></span>
                     <?php endif ; ?>
                     <div id="hidden-content-1" class="contacts__popup_partner contacts__popup">
+                        <div class="contacts__popup-close"></div>
                         <?php if($bgimg = get_sub_field('bgimg')): ?>
                             <img src="<?php echo $bgimg;?>" alt="background image" class="contacts__popup-img">
                         <?php endif ; ?>
